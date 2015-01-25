@@ -10,7 +10,7 @@ def AP(start, end, gap):
     "calculate the sum of the AP series from start to end with gap of gap"
     "sum = (start + end) * total_no / 2"
     
-    while(end / gap != 0):
+    while(end % gap != 0):
         end -= 1;
     
     total_no = ((end - start) / gap ) + 1
@@ -18,9 +18,9 @@ def AP(start, end, gap):
 
 def main():
     "Main function it calls AP for sum with 3, 5 and 15"
-    sum_3 = AP(3, 1000, 3)
-    sum_5 = AP(5, 1000, 5)
-    sum_15 = AP(15, 1000, 15)
+    sum_3 = AP(3, 999, 3)
+    sum_5 = AP(5, 999, 5)
+    sum_15 = AP(15, 999, 15)
     
     print sum_3 + sum_5 - sum_15
 
