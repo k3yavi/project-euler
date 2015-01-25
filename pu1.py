@@ -24,5 +24,4 @@ def main():
     
     print sum_3 + sum_5 - sum_15
 
-if __name__ == "__main__":
-    main()
+main()
