@@ -13,6 +13,10 @@ dictionary argmax
 ```
 max(stats, key=stats.get)
 ```
+combination of 2
+```
+itertools.combinations(a,2)
+```
 
 ## FASTA
 ```
