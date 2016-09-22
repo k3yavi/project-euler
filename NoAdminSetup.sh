@@ -56,5 +56,8 @@ rm Miniconda3-latest-Linux-x86_64.sh
 #add miniconda path to zshrc
 echo 'export PATH="PATH=$HOME/miniconda3/bin:$PATH"' >>~/.zshrc
 
+#install spf-13
+sh <(curl https://j.mp/spf13-vim3 -L)
+
 #install supplementary tools
 brew install tmux
