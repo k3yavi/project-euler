@@ -59,5 +59,8 @@ echo 'export PATH="PATH=$HOME/miniconda3/bin:$PATH"' >>~/.zshrc
 #install spf-13
 sh <(curl https://j.mp/spf13-vim3 -L)
 
+#change tmux Control-A to control-S
+echo 'set-option -g prefix C-s' >> ~/.tmux.conf
+
 #install supplementary tools
 brew install tmux
