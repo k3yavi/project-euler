@@ -1,4 +1,4 @@
-#new computer setup, bash script,
+#new computer setup, bash script, Does not requires admin
 #NOTE: saving read only vim ```w !sudo tee % >/dev/null```
 
 #Automatic log in
@@ -36,3 +36,25 @@ echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >>~/.profile
 echo 'export SHELL=$(which zsh)
 exec $(which zsh) -l' >> ~/.profile
 
+#install oh my zsh
+#download shell scriopt for oh-myzsh
+wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+
+#edit and delete line 30 from downloaded file install.sh i.e. exit from line 30
+#execute install.sh
+chmod +x install.sh && ./install.sh
+rm install.sh
+
+#change theme rubyrushell to bira in ~/.zshrc line 10
+
+#install miniconda
+#link here is for python 3
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh && ./Miniconda3-latest-Linux-x86_64.sh
+rm Miniconda3-latest-Linux-x86_64.sh
+
+#add miniconda path to zshrc
+echo 'export PATH="PATH=$HOME/miniconda3/bin:$PATH"' >>~/.zshrc
+
+#install supplementary tools
+brew install tmux
