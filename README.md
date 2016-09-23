@@ -8,7 +8,7 @@ get 5 line after every pattern line
 awk '/PATTERN/ {for(i=1; i<=5; i++) {getline; print}}' inputfile
 ```
 
-Can be used in fastq too print every 2nd read
+Can be used in fastq to print every 2nd read
 ```
 awk ' NR%8 == 1 {for(i=1; i<=4; i++) {print;getline} }'
 ```
