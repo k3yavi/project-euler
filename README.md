@@ -7,8 +7,7 @@ Bash maintains an internal hash of previously found executables in your path. In
 ```
 hash siege
 ```  
-You can also clear all hashed locations:
-
+You can also clear all hashed locations:  
 ```
 hash -r
 ```
