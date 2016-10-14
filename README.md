@@ -3,10 +3,7 @@
 Frequently used Command and library Syntax
 
 #bash
-Bash maintains an internal hash of previously found executables in your path. In this case, it has details that at one time there was an executable at /usr/bin/siege, and reuses that path to avoid having to search again. You need to tell bash to manually rehash the path for siege like so:  
-```
-hash siege
-```  
+Bash maintains an internal hash of previously found executables in your path. In this case, it has details that at one time there was an executable at /usr/bin/siege, and reuses that path to avoid having to search again.
 You can also clear all hashed locations:  
 ```
 hash -r
