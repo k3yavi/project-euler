@@ -12,7 +12,7 @@ hash -r
 ##gnu parallel
 convert multiple sam to bam with sorting in parallel
 ```
-parallel -j 16 "samtools view -bS {} | samtools sort -" ::: `ls *.sam`
+parallel -j 16 "samtools view -bS {} | samtools sort - -o {\}.bam" ::: `ls *.sam`
 ```
 
 ##awk
