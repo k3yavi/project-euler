@@ -9,6 +9,12 @@ You can also clear all hashed locations:
 hash -r
 ```
 
+##gnu parallel
+convert multiple sam to bam with sorting in parallel
+```
+parallel -j 16 "samtools view -bS {} | samtools sort -" ::: `ls *.sam`
+```
+
 ##awk
 get 5 line after every pattern line
 ```
