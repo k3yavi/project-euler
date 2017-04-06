@@ -50,6 +50,13 @@ ps aux | grep ssh
 kill -9 <pid>
 ps aux
 ipython notebook --no-browser --port=7777
+
+import pandas as pd
+import numpy as np
+import matplotlib as mpl
+mpl.use('Agg')
+import matplotlib.pyplot as plt
+%matplotlib inline
 ```
 
 ##flux-simulator
