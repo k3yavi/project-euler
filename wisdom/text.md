@@ -16,7 +16,7 @@
 5. Bloom filter (Normal and Quotient)
 6. Graphical Models (This is lil more generic)
 
-# Things Rob does different than me:
+# Things Rob do different than me:
 1. Project Ideas are very well formulated with the tineast detail possible with every corner case.
 2. Think like Bayesian !!!!
 3. He think on multiple projects parallely while I can concentrate on only one at a time. (idk which is better though). [UPDATE] Working on multiple projects helps connect the insights from one another.
