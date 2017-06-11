@@ -26,6 +26,11 @@ Can be used in fastq to print every 2nd read
 awk ' NR%8 == 1 {for(i=1; i<=4; i++) {print;getline} }'
 ```
 
+compare two columns from different file and get set difference
+```
+awk 'NR==FNR{c[$1]++;next};c[$1] == 0' geReads.txt txReads.txt| wc -l
+```
+
 ## python
 dictionary argmax
 ```
