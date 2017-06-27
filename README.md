@@ -16,6 +16,11 @@ parallel -j 16 "samtools view -bS {} | samtools sort - -o {\}.bam" ::: `ls *.sam
 ```
 
 ##awk
+remove things from one file present in another 
+`https://stackoverflow.com/a/18477228/6871844`
+```
+awk '{if (f==1) { r[$0] } else if (! ($0 in r)) { print $0 } } ' f=1 exclude-these.txt f=2 from-this.txt
+```
 get 5 line after every pattern line
 ```
 awk '/PATTERN/ {for(i=1; i<=5; i++) {getline; print}}' inputfile
