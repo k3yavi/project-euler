@@ -22,3 +22,4 @@
 3. He think on multiple projects parallely while I can concentrate on only one at a time. (idk which is better though). [UPDATE] Working on multiple projects helps connect the insights from one another.
 4. Think about the tineast detail why it could have happen. Imagination is the key!!!
 5. Be cautious of pre-mature conclusion, this biases your analysis, towards the already set conclusion (can be wrong). 
+6. Avoid analysis heavy parts of the project, disribute instead and concentrate on method. Don't listen to others.
