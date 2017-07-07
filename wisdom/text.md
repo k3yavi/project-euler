@@ -24,3 +24,4 @@
 5. Be cautious of pre-mature conclusion, this biases your analysis, towards the already set conclusion (can be wrong). 
 6. Avoid analysis heavy parts of the project, disribute instead and concentrate on method. Don't listen to others.
 7. Read what you wrote before sending it once again, and check if it really answers the question.
+8. Replying right is the key not low turnaround time (Although sometimes fast*er* reply is needed too.)
