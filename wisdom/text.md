@@ -28,3 +28,4 @@
 
 # Message to myself
 1. Be calm when someone condescend/bitch about you because you lose your shit and make the situation worse.
+2. Frequency doesn't match.
