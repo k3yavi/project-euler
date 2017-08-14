@@ -80,3 +80,8 @@ import matplotlib.pyplot as plt
 sync && sudo purge
 free && sync && sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches' && free;
 ```
+
+##extract txp->gene relation from GTF
+```
+bioawk -c gff '$feature=="transcript" {print $group}' gencode.v26.primary_assembly.annotation.gtf | awk -F ' ' '{print substr($4,2,length($4)-3) ","  substr($2,2,length($2)-3)}' - > txp2gene.tsv
+ ```
