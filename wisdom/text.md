@@ -30,3 +30,4 @@
 1. Be calm when someone condescend/bitch about you because you lose your shit and make the situation worse.
 2. Frequency doesn't match.
 3. RoadBlocks are part of the journey, cherish it.
+4. Unless you invest in yourself no one will invest in you.
