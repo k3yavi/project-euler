@@ -1,0 +1,3 @@
+#BioSketch
+
+**Avi** is a fourth year Ph.D. student in Computer Science department at Stony Brook University. His dissertation research is focussed on designing and implementing scalable methods for high-throughput (bulk and single-cell) transcriptomic data. He has previously worked (citation needed?), in collaboration with Dr. Patro, on different likelihood factorizations and comparing the posterior uncertainty of bulk transcriptomic abundances through resampling methods (ex. Gibbs-Sampling and Bootstrapping). Also, he is actively working in incorporating barcode and UMI level uncertainty in the posterior distribution(variance). Collaborating closely with Dr. Patro he would be responsible for the development, analysis, and comparison of the methods proposed in Aim 1.
