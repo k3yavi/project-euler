@@ -15,6 +15,7 @@
 4. de-bruijn graph (colored and compact)
 5. Bloom filter (Normal and Quotient)
 6. Graphical Models (This is lil more generic)
+7. MCMC
 
 # Things Rob do different than me:
 1. Project Ideas are very well formulated with the tineast detail possible with every corner case.
@@ -31,3 +32,4 @@
 2. Frequency doesn't match.
 3. RoadBlocks are part of the journey, cherish it.
 4. Unless you invest in yourself no one will invest in you.
+5. Combining two paper is easier and faster.
