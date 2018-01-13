@@ -6,7 +6,10 @@
   * PE / SE
   * 64/32
   * Quasi / SMEM *multithread
-3. Validate at every step, specially multi-thread opration. like in multithread environment Do everything in one variable and then save everything to a const variable before further processing.
+3. Validate at every step, specially multi-thread opration. like in multithread environment Do everything in one variable and then save everything to a const variable before further processing.  
+4. Don't use try/catch inside regular code or loops, exception handling is expensive.
+5. Use references wherever possible instead of regular pass by value.
+6. Mutex is expensive !
 
 # frequently used data-structure in our lab (No particular order):
 1. Equivalence Class
