@@ -18,7 +18,8 @@ cat .ssh/id_rsa.pub | ssh user@remote-ip 'cat >> .ssh/authorized_keys'
 ssh user@name
 
 #install linubrew; Doesn't need admin
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 #set path
 PATH="$HOME/.linuxbrew/bin:$PATH"
