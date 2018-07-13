@@ -30,4 +30,11 @@ No Particular Order
 * Use New-MST deduping idea.
 
 #### Information Sharing
-* use Bayesian model to shar the information across cell.
+* use Bayesian model to share the information across cell.
+
+## Jul 13th 2018
+Four Projects are of atmost importance
+### Alevin
+### UMI -> RECOMB
+### debruijn -> ISMB
+### Intron (Drop-Seq)
