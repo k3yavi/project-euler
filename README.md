@@ -12,10 +12,15 @@ hash -r
 ##gnu parallel
 convert multiple sam to bam with sorting in parallel
 ```
-parallel -j 16 "samtools view -bS {} | samtools sort - -o {\}.bam" ::: `ls *.sam`
+parallel -j 16 "samtools view -bS {} | samtools sort - -o {/.}.bam" ::: `ls *.sam`
 ```
 
 ##awk
+subsample every Xth read
+```
+awk 'NR%(4*X)==0 {for(i=1; i<=4; i++) {getline; print}}' full_bcs.fastq > half_bcs.fastq
+```
+
 remove things from one file present in another 
 `https://stackoverflow.com/a/18477228/6871844`
 ```

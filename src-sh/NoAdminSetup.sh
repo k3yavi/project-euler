@@ -18,7 +18,8 @@ cat .ssh/id_rsa.pub | ssh user@remote-ip 'cat >> .ssh/authorized_keys'
 ssh user@name
 
 #install linubrew; Doesn't need admin
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 #set path
 PATH="$HOME/.linuxbrew/bin:$PATH"
@@ -27,7 +28,7 @@ PATH="$HOME/.linuxbrew/bin:$PATH"
 brew install zsh
 
 #create .zshrc
-mkdir -p ~/.zshrc
+touch ~/.zshrc
 
 #add path to environment variable
 echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >>~/.profile
@@ -58,6 +59,10 @@ echo 'export PATH="PATH=$HOME/miniconda3/bin:$PATH"' >>~/.zshrc
 
 #install spf-13
 sh <(curl https://j.mp/spf13-vim3 -L)
+
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
 
 #change tmux Control-A to control-S
 echo 'set-option -g prefix C-s' >> ~/.tmux.conf
