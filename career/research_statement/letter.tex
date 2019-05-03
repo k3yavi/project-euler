@@ -1,0 +1,136 @@
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\renewcommand{\refname}{References}
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+\usepackage{xspace}
+
+\bibliographystyle{unsrtnat}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+\newcommand{\ra}{read-alignment\xspace}
+\newcommand{\qm}{quasi-mapping\xspace}
+\newcommand{\rapmap}{\texttt{RapMap}\xspace}
+\newcommand{\alevin}{\texttt{alevin}\xspace}
+\newcommand{\Alevin}{\texttt{Alevin}\xspace}
+
+\firstname{Research Statement} % Your first name
+\familyname{} % Your last name
+\title{Avi Srivastava | \today}
+\address{277 Sheep Pasture}{East Setauket-11733, New York}
+\mobile{(631)974-8087}
+
+\email{asrivastava@cs.stonybrook.edu}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\makecvtitle % Print the CV title
+
+My Ph.D. dissertation \& research interest is in contributing to a better understanding
+of dynamic gene expression landscape through analysis efficient algorithms and uncertainty 
+aware graphical models. This broad goal has led me into the field of Computational Biology 
+and the study of RNA Sequencing (RNA-seq).
+
+\section{Published Research}
+RNA-seq technologies are evolving rapidly, and with them, the requirement for fast and accurate 
+tools to analyze the generated data. The first step of many RNA-seq analyses requires us to solve 
+the problem of \ra. When reads are aligned to a collection of reference sequences that share a 
+substantial amount of sub-sequence (near or exact repeats), a single read can have many potential 
+alignments, and considering all such alignment can be crucial for downstream analysis. 
+
+{\hskip 2em}I introduce a novel concept, \qm, and an efficient algorithm implementing this approach called 
+\rapmap which maps RNA-seq reads (sequences) to the reference sequence(s) (transcriptome). 
+\rapmap is capable of \textit{mapping} sequencing reads to a target transcriptome substantially 
+faster than existing alignment tools. The algorithm I employ to implement \qm uses several 
+efficient data structures and takes advantage of the special structure of shared sequence prevalent 
+in transcriptomes to rapidly provide highly-accurate mapping information. \rapmap is
+well accepted by community, till date, the manuscript is downloaded $\sim$9k times and 
+cited 44 times \cite{rxivist}.
+
+{\hskip 2em}While bulk RNA-seq is an established method to perform genome-wide quantification of gene
+expressions\cite{rseq}, however, bulk experiments average-out the expression pattern of an individual cell 
+(or a cell type) across millions of cells, losing cell-level heterogeneity which is crucial to understand
+the gene expression landscape. Moreover, quantification tools for bulk RNA-seq cannot be directly used for 
+droplet based single cell RNA-seq (dscRNA-seq) data\cite{dropseq, indrop, tenx}. 
+I introduced alevin, a fast end-to-end pipeline to process dscRNA-seq data, addressesing
+the inherent bias in existing tools which discard gene-ambiguous reads and improves the
+accuracy of gene abundance estimates. \Alevin is considerably faster, typically 8 times,
+than existing gene-quantification approaches, while also using less memory.
+
+\section{Future Research}
+Given the success of both \rapmap and \alevin, I continued pursuing this line of research and 
+collaborated to develop other downstream tools \cite{rapclust, ddfact, pufferfish, swish, minnow}. 
+In addition, I plan to generalize both our methods to make it more robust and extend it further. 
+As \qm is a novel concept but it trades-off speed with accuracy, which is usually enough for a typical 
+RNA-seq experiment, however, it loses accuracy in \textit{relatively} complex datasets. 
+In my preliminary study, I have already optimized \rapmap for efficient, dynamic (dataset dependent) 
+speed / accurcay tradeoff. Moreover, as \alevin internally uses \rapmap for transcriptome mapping, I believe 
+improvement in mapping would be directly reflected on the performance of \alevin while also improving the 
+performance of other downstream tools.
+
+\begin{thebibliography}{1}
+\bibitem{rapclust} Srivastava, Avi, et al. 
+"Accurate, fast and lightweight clustering of de novo transcriptomes using fragment equivalence classes." 
+arXiv preprint arXiv:1604.03250 (2016).
+
+\bibitem{dropseq} Macosko, E. Z., Basu, A., Satija, R., Nemesh, J., Shekhar, K., Goldman, M., ... \& Trombetta, J. J. (2015). 
+"Highly parallel genome-wide expression profiling of individual cells using nanoliter droplets". 
+Cell, 161(5), 1202-1214.
+
+\bibitem{ddfact} Zakeri, M., Srivastava, A., Almodaresi, F., \& Patro, R. (2017). 
+"Improved data-driven likelihood factorizations for transcript abundance estimation". 
+Bioinformatics, 33(14), i142-i151.
+
+\bibitem{indrop} Klein, A. M., Mazutis, L., Akartuna, I., Tallapragada, N., Veres, A., Li, V., ... \& Kirschner, M. W. (2015). 
+"Droplet barcoding for single-cell transcriptomics applied to embryonic stem cells". 
+Cell, 161(5), 1187-1201.
+
+\bibitem{pufferfish} Almodaresi, F., Sarkar, H., Srivastava, A., \& Patro, R. (2018). 
+"A space and time-efficient index for the compacted colored de Bruijn graph".
+Bioinformatics, 34(13), i169-i177.
+
+\bibitem{swish} Zhu, A., Srivastava, A., Ibrahim, J. G., Patro, R., \& Love, M. I. (2019). 
+"Nonparametric expression analysis using inferential replicate counts". BioRxiv.
+
+\bibitem{tenx} Zheng, G. X., Terry, J. M., Belgrader, P., Ryvkin, P., Bent, Z. W., Wilson, R., ... \& Gregory, M. T. (2017). 
+"Massively parallel digital transcriptional profiling of single cells". Nature communications, 8, 14049.
+
+\bibitem{minnow} Sarkar, H., Srivastava A., Patro R. (2019)
+"Minnow: A principled framework for rapid simulation of dscRNA-seq data at the read level"
+ISMB-2019
+
+\bibitem{rseq} Mortazavi, A., Williams, B. A., McCue, K., Schaeffer, L., \& Wold, B. (2008). 
+"Mapping and quantifying mammalian transcriptomes by RNA-Seq". 
+Nature methods, 5(7), 621.
+
+\bibitem{rxivist} {rxivist: webpage} 
+{\href{https://rxivist.org/papers/5324} https://rxivist.org/papers/5324}
+
+\end{thebibliography}
+
+\end{document}
