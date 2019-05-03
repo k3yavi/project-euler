@@ -51,46 +51,47 @@
 \begin{document}
 \makecvtitle % Print the CV title
 
-My Ph.D. dissertation \& research interest is in contributing to a better understanding
-of dynamic gene expression landscape through analysis efficient algorithms and uncertainty 
-aware graphical models. This broad goal has led me into the field of Computational Biology 
-and the study of RNA Sequencing (RNA-seq).
+My main research interest is in contributing to a better understanding
+of dynamic gene expression landscapes through efficient algorithms and statistical
+inference appraoches that account for unceratinty. This broad goal has led me into the field 
+of Computational Biology and the study of RNA Sequencing (RNA-seq) experiments, in particular.
 
 \section{Published Research}
 RNA-seq technologies are evolving rapidly, and with them, the requirement for fast and accurate 
-tools to analyze the generated data. The first step of many RNA-seq analyses requires us to solve 
+tools to determine and analyze the origin of reads in the generated data. 
+The first step of many RNA-seq analyses requires to solve 
 the problem of \ra. When reads are aligned to a collection of reference sequences that share a 
 substantial amount of sub-sequence (near or exact repeats), a single read can have many potential 
 alignments, and considering all such alignment can be crucial for downstream analysis. 
 
-{\hskip 2em}I introduce a novel concept, \qm, and an efficient algorithm implementing this approach called 
+{\hskip 2em}I introduced a novel concept, \qm, and an efficient algorithm implementing this approach called 
 \rapmap which maps RNA-seq reads (sequences) to the reference sequence(s) (transcriptome). 
 \rapmap is capable of \textit{mapping} sequencing reads to a target transcriptome substantially 
-faster than existing alignment tools. The algorithm I employ to implement \qm uses several 
+faster than existing alignment tools. The algorithm I employed to implement \qm uses several 
 efficient data structures and takes advantage of the special structure of shared sequence prevalent 
 in transcriptomes to rapidly provide highly-accurate mapping information. \rapmap is
-well accepted by community, till date, the manuscript is downloaded $\sim$9k times and 
+well accepted by community, to date, the manuscript has been downloaded $\sim$9k times and 
 cited 44 times \cite{rxivist}.
 
 {\hskip 2em}While bulk RNA-seq is an established method to perform genome-wide quantification of gene
-expressions\cite{rseq}, however, bulk experiments average-out the expression pattern of an individual cell 
-(or a cell type) across millions of cells, losing cell-level heterogeneity which is crucial to understand
+expressions\cite{rseq}, bulk experiments average-out the expression patterns of individual cells 
+(or cell types) across millions of cells, losing cell-level heterogeneity which is crucial to understand
 the gene expression landscape. Moreover, quantification tools for bulk RNA-seq cannot be directly used for 
-droplet based single cell RNA-seq (dscRNA-seq) data\cite{dropseq, indrop, tenx}. 
-I introduced alevin, a fast end-to-end pipeline to process dscRNA-seq data, addressesing
-the inherent bias in existing tools which discard gene-ambiguous reads and improves the
-accuracy of gene abundance estimates. \Alevin is considerably faster, typically 8 times,
+droplet based single-cell RNA-seq (dscRNA-seq) data\cite{dropseq, indrop, tenx}. 
+I introduced \alevin, a fast end-to-end pipeline to process dscRNA-seq data, addressesing
+the inherent bias in existing tools which discard gene-ambiguous reads and improving the
+accuracy of gene abundance estimates. \Alevin is considerably faster, typically 8 times faster,
 than existing gene-quantification approaches, while also using less memory.
 
 \section{Future Research}
-Given the success of both \rapmap and \alevin, I continued pursuing this line of research and 
+Given the success of both \rapmap and \alevin, I continued pursuing this line of research, and 
 collaborated to develop other downstream tools \cite{rapclust, ddfact, pufferfish, swish, minnow}. 
-In addition, I plan to generalize both our methods to make it more robust and extend it further. 
-As \qm is a novel concept but it trades-off speed with accuracy, which is usually enough for a typical 
-RNA-seq experiment, however, it loses accuracy in \textit{relatively} complex datasets. 
-In my preliminary study, I have already optimized \rapmap for efficient, dynamic (dataset dependent) 
+In addition, I plan to generalize both methods to make them more robust and extend their capabilities. 
+As \qm is a useful novel concept, but it trades-off some accrucay for speed. This is often ok for typical 
+RNA-seq experiments. However, it loses accuracy in \textit{relatively} complex datasets. 
+In an ongoing work, I have already optimized \rapmap to provide an efficient, dynamic (dataset dependent) 
 speed / accurcay tradeoff. Moreover, as \alevin internally uses \rapmap for transcriptome mapping, I believe 
-improvement in mapping would be directly reflected on the performance of \alevin while also improving the 
+improvement in mapping quality will be directly reflected in the accurcay of \alevin, while also improving the 
 performance of other downstream tools.
 
 \begin{thebibliography}{1}
